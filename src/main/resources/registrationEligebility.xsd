@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	targetNamespace="http://www.urlOfOurService.org/registrationEligibility"
+	xmlns:tns="http://www.urlOfOurService.org/registrationEligibility"
+	elementFormDefault="qualified">
+	<!-- Request Object : from the client -->
+	<xsd:element name="StudentRequest">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="studentName" type="xsd:string" />
+				<xsd:element name="age" type="xsd:int" />
+				<xsd:element name="graduationScore">
+					<xsd:simpleType>
+						<xsd:restriction base="xsd:double">
+							<xsd:minInclusive value="0" />
+							<xsd:maxInclusive value="20" />
+						</xsd:restriction>
+					</xsd:simpleType>
+				</xsd:element>
+				<xsd:element name="numberOfCertifications"
+					type="xsd:positiveInteger" />
+				<xsd:element name="javaLastYearScore">
+					<xsd:simpleType>
+						<xsd:restriction base="xsd:double">
+							<xsd:minInclusive value="0" />
+							<xsd:maxInclusive value="20" />
+						</xsd:restriction>
+					</xsd:simpleType>
+				</xsd:element>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<!-- Request Object : to the client -->
+	<xsd:element name="wsResponse">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="isEligible" type="xsd:boolean" />
+				<xsd:element name="scoreOfApplicant">
+					<xsd:simpleType>
+						<xsd:restriction base="xsd:double">
+							<xsd:minInclusive value="0" />
+							<xsd:maxInclusive value="20" />
+						</xsd:restriction>
+					</xsd:simpleType>
+				</xsd:element>
+				<xsd:element name="criteriaMismatch" type="xsd:string"
+					maxOccurs="unbounded" />
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+</xsd:schema>
