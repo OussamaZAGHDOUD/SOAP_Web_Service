@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
-	targetNamespace="http://www.urlOfOurService.org/registrationEligibility"
-	xmlns:tns="http://www.urlOfOurService.org/registrationEligibility"
+	targetNamespace="http://www.oussama.com/registrationEligibility"
+	xmlns:tns="http://www.oussama.com/registrationEligibility"
 	elementFormDefault="qualified">
 	<!-- Request Object : from the client -->
 	<xsd:element name="StudentRequest">
