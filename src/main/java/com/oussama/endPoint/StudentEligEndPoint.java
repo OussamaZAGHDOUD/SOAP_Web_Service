@@ -10,14 +10,16 @@ import com.oussama.registrationeligibility.StudentRequest;
 import com.oussama.registrationeligibility.WsResponse;
 import com.oussama.service.StudentEligService;
 
+// the Endpoint cannot play the role of the Controller/MessageDispatcher 
 @Endpoint
 public class StudentEligEndPoint {
-	public final static String nameSpace="http://www.oussama.com/registrationEligibility";
+	public final static String nameSpace = "http://www.oussama.com/registrationEligibility";
 	@Autowired
-	private StudentEligService service ;
-	@PayloadRoot(namespace = nameSpace,localPart = "StudentRequest")
+	private StudentEligService service;
+
+	@PayloadRoot(namespace = nameSpace, localPart = "StudentRequest")
 	@ResponsePayload
-	public WsResponse getStatus(@RequestPayload StudentRequest studentRequest) {			
+	public WsResponse getStatus(@RequestPayload StudentRequest studentRequest) {
 		return service.checkEligibility(studentRequest);
 	}
 }
