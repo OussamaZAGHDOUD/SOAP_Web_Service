@@ -7,3 +7,4 @@ to more understand the contract
 
 i used SOAPUI to test the service :
 
+![image](https://user-images.githubusercontent.com/53187839/115641824-c633ff00-a311-11eb-9f8f-63d637c7954e.png)
