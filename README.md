@@ -1,6 +1,6 @@
 # SOAP_Web_Service
-A web service , the client send a request with some informations about a student who applied for un internship or a master degree registration.
-The criteria of acceptation is realted in the age , lastYearScore, LastYearJavaScore and numberOfCertifications 
+A web service , the client send a request with some informations about a student who applied for an internship or a master degree registration.
+The criterias for acceptation are realted to the age , lastYearScore, LastYearJavaScore and numberOfCertifications 
 
 After running the application try to access :   http://localhost:9090/ws/reg.wsdl
 to more understand the contract 
